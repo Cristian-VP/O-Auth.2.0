@@ -23,19 +23,18 @@ body {
 }
 
 .auth_section {
-    width: 280px;
+    width: 320px;
     height: 360px;
     padding: 20px;
     text-align: center;
+    border-radius: 15px;
     background-color: white;
 }
 
 .auth_section article div:nth-child(1) {
     height: 40px;
     margin-bottom: 20px;
-    padding: 5px 0px;
-    
-    background-color: sandybrown;
+    padding: 5px 0;
 }
 
 .auth_section article div:nth-child(1) img {
@@ -69,16 +68,18 @@ body {
 }
 
 .btn-google {
+    width: 80%;
+    display: inline-block;
     background-color: #066fd1;
+    margin-top: 80px;
     color: white;
-    padding: 16px;
+    padding: 4px;
     font-weight: 600;
     text-decoration: none;
     border: none;
     border-radius: 16px;
     height: 30px;
-    cursor: pointer;
-    margin-top: 80px;
+
 }
 
 
