@@ -17,9 +17,17 @@
             </div>
             <div>
                 <p><strong>Hello!</strong> Try to sign in <br> with your Google account.</p>
-                <a href="../src/google-auth-generic.php?action=google_login" class="btn btn-google">Sign in</a>
+                <a href="/src/google-auth-generic.php?action=google_login" class="btn btn-google">Sign in</a>
             </div>
         </article>
     </section>
+    <div id="error-modal">
+      <div>
+        <img id="error-img" src="" alt="Error">
+        <br>
+        <button onclick="document.getElementById('error-modal').classList.remove('active')">Cerrar</button>
+      </div>
+    </div>
+    <script src="./js/modal-error.js"></script>
   </body>
 </html>
