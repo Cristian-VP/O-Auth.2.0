@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="es_ES" dir="ltr">
   <head>
     <title>OAuth Project</title>
@@ -25,9 +26,10 @@
       <div>
         <img id="error-img" src="" alt="Error">
         <br>
-        <button onclick="document.getElementById('error-modal').classList.remove('active')">Cerrar</button>
+        <button class="modal-close" aria-label="Cerrar modal" >Cerrar</button>
       </div>
     </div>
-    <script src="./js/modal-error.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="./js/modal-error.js"></script>
   </body>
 </html>

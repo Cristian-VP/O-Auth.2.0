@@ -8,3 +8,10 @@ document.addEventListener('DOMContentLoaded', function() {
         modal.classList.add('active');
     }
 });
+
+document.addEventListener('click', (e) => {
+  const btn = e.target.closest('.modal-close');
+  if (!btn) return;
+  const modal = document.getElementById('error-modal');
+  modal.classList.toggle('active');
+});

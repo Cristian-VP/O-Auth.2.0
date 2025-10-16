@@ -3,16 +3,18 @@ async function loadDataUser() {
     .then(function (response) {
         const user = response.data || {};
         const imgElement = document.querySelector('.profile-picture');
-        const picture = (user.profile_picture || '').trim();
+        const picture = user.profile_picture;
 
-        
-            if(!picture) {
-                imgElement.src = 'assets/default_user.webp';
+        if(!picture || picture === null) {
+            imgElement.src = '../assets/default_user.webp';
         } else {
-            imgElement.src = picture;
+            imgElement.src = picture.substring(
+                picture.indexOf('h'),
+                picture.length 
+            )
         }
 
-        document.querySelector('.user-name').textContent = user.username;
+        document.querySelector('.user-name').textContent = reformatString('-', user.username);
         document.querySelector('.user-email').textContent = user.email;
     })
         .catch(function (error) {
@@ -57,6 +59,9 @@ function navToHome() {
     }
 }
 
+function reformatString(separator, string) {
+    return string.charAt(0).toUpperCase() + string.slice(1).split(separator).join(' ');
+}
    
 
 // Doom is ready

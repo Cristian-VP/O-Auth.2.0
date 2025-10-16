@@ -11,12 +11,11 @@
 }
 
 #error-modal.active {
-    display: flex;
+    display: none;
 }
 
 #error-modal div {
     width: auto;
-    background-color: olive;
 }
 
 #error-img {
